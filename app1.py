@@ -35,16 +35,12 @@ if uploaded_image is not None:
         try:
             max_index = predict_image(uploaded_image)
             classes = [
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                # "LION",
-                # "OCELOT",
-                # "PUMA",
-                # "SNOW LEOPARD",
-                # "TIGER",
+                'Hair Loss Photos Alopecia and other Hair Diseases',
+                'Melanoma Skin Cancer Nevi and Moles',
+                'Nail Fungus and other Nail Disease',
+                'Urticaria Hives',
+                'Warts Molluscum and other Viral Infections'
+    
             ]
             st.write("Prediction:", classes[max_index])
         except Exception as e:
