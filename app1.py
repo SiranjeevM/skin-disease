@@ -11,7 +11,7 @@ def load_model_with_custom_objects(model_path):
     return tf.keras.models.load_model(model_path, custom_objects=custom_objects)
 
 # Load the pre-trained ResNet model with custom objects
-model = load_model_with_custom_objects("model.h5")
+model = load_model_with_custom_objects("model (1).h5")
 
 # Define a function to make predictions
 def predict_image(image_path):
@@ -35,16 +35,16 @@ if uploaded_image is not None:
         try:
             max_index = predict_image(uploaded_image)
             classes = [
-                "AFRICAN LEOPARD",
-                "CARACAL",
-                "CHEETAH",
-                "CLOUDED LEOPARD",
-                "JAGUAR",
-                "LION",
-                "OCELOT",
-                "PUMA",
-                "SNOW LEOPARD",
-                "TIGER",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                # "LION",
+                # "OCELOT",
+                # "PUMA",
+                # "SNOW LEOPARD",
+                # "TIGER",
             ]
             st.write("Prediction:", classes[max_index])
         except Exception as e:
